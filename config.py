@@ -9,52 +9,42 @@ RSI_LENGTH = 14
 RSI_LEVEL = 30
 
 
-WATCHLIST = [
-    # =========================
+WATCHLIST = {
     # INDIA
-    # =========================
-    "^NSEI",            # Nifty 50
-    "^NSEBANK",         # Nifty Bank
-    "^CNXIT",           # Nifty IT
-    "^CNXAUTO",         # Nifty Auto
-    "^CNXPHARMA",       # Nifty Pharma
-    "^CNXPSUBANK",      # Nifty PSU Bank
-    "^CNXINFRA",        # Nifty Infrastructure
-    "^CNXMETAL",        # Nifty Metal
-    "^CNXFMCG",         # Nifty FMCG
-    "^CNXENERGY",       # Nifty Energy
-    "^CNXREALTY",       # Nifty Realty
-    "^CNXMEDIA",        # Nifty Media
-    "JUNIORBEES.NS",   # Nifty Next 50 ETF
-    "MIDCAPETF.NS",    # Midcap ETF (if available)
+    "^NSEI": "Nifty 50",
+    "^NSEBANK": "Bank Nifty",
+    "^CNXIT": "Nifty IT",
+    "^CNXAUTO": "Nifty Auto",
+    "^CNXPHARMA": "Nifty Pharma",
+    "^CNXPSUBANK": "Nifty PSU Bank",
+    "^CNXINFRA": "Nifty Infrastructure",
+    "^CNXMETAL": "Nifty Metal",
+    "^CNXFMCG": "Nifty FMCG",
+    "^CNXENERGY": "Nifty Energy",
+    "^CNXREALTY": "Nifty Realty",
+    "^CNXMEDIA": "Nifty Media",
+    "JUNIORBEES.NS": "Nifty Next 50",
+    "MIDCAPETF.NS": "Midcap ETF",
 
-    # =========================
     # UNITED STATES
-    # =========================
-    "^GSPC",            # S&P 500
-    "^NDX",             # Nasdaq-100
-    "^DJI",             # Dow Jones
-    "^RUT",             # Russell 2000
-    "^VIX",             # Volatility Index
-    "^SOX",             # Philadelphia Semiconductor Index
+    "^GSPC": "S&P 500",
+    "^NDX": "Nasdaq-100",
+    "^DJI": "Dow Jones",
+    "^RUT": "Russell 2000",
+    "^VIX": "VIX",
+    "^SOX": "Semiconductor Index",
 
-    # =========================
     # COMMODITIES
-    # =========================
-    "GC=F",             # Gold
-    "SI=F",             # Silver
-    "CL=F",             # WTI Crude Oil
-    "NG=F",             # Natural Gas
+    "GC=F": "Gold",
+    "SI=F": "Silver",
+    "CL=F": "Crude Oil",
+    "NG=F": "Natural Gas",
 
-    # =========================
     # CURRENCIES
-    # =========================
-    "DX-Y.NYB",         # US Dollar Index (DXY)
-    "INR=X",            # USD/INR Exchange Rate
+    "DX-Y.NYB": "US Dollar Index",
+    "INR=X": "USD/INR",
 
-    # =========================
     # CRYPTO
-    # =========================
-    "BTC-USD",          # Bitcoin
-    "ETH-USD",          # Ethereum
-]
+    "BTC-USD": "Bitcoin",
+    "ETH-USD": "Ethereum",
+}
