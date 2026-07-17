@@ -1,5 +1,7 @@
 import json
 import os
+from datetime import datetime
+
 import requests
 import yfinance as yf
 
@@ -44,9 +46,17 @@ if os.path.exists(STATE_FILE):
 else:
     state = {}
 
-summary = "📊 ETF Daily Report\n\n"
+# ----------------------------
+# Report Header
+# ----------------------------
+today = datetime.now().strftime("%d %b %Y")
 
-for ticker in WATCHLIST:
+summary = f"""📊 Market Daily Report
+📅 {today}
+
+"""
+
+for ticker, name in WATCHLIST.items():
 
     try:
 
@@ -67,13 +77,13 @@ for ticker in WATCHLIST:
         )
 
         if df.empty:
-            print(f"{ticker}: No data")
+            print(f"{name}: No data")
             continue
 
         close = df["Close"].squeeze()
 
         if len(close) < RSI_LENGTH + 2:
-            print(f"{ticker}: Not enough data")
+            print(f"{name}: Not enough data")
             continue
 
         rsi = calculate_rsi(close, RSI_LENGTH)
@@ -83,7 +93,7 @@ for ticker in WATCHLIST:
         price = float(close.iloc[-1])
 
         # ----------------------------
-        # Emoji for Daily Report
+        # Status
         # ----------------------------
         if curr <= 30:
             emoji = "🔴"
@@ -99,8 +109,8 @@ for ticker in WATCHLIST:
             status = "NORMAL"
 
         summary += (
-            f"{emoji} {ticker.replace('.NS', '')}\n"
-            f"   💰 ₹{price:.2f} | RSI {curr:.2f} | {status}\n\n"
+            f"{emoji} {name}\n"
+            f"   💰 {price:.2f} | RSI {curr:.2f} | {status}\n\n"
         )
 
         # ----------------------------
@@ -112,11 +122,11 @@ for ticker in WATCHLIST:
 
         if crossed and not already:
 
-            message = f"""🚨 ETF BUY ALERT
+            message = f"""🚨 BUY ALERT
 
-📈 ETF : {ticker}
+📈 Asset : {name}
 
-💰 Price : ₹{price:.2f}
+💰 Price : {price:.2f}
 
 📊 RSI({RSI_LENGTH}) : {curr:.2f}
 
@@ -129,17 +139,15 @@ for ticker in WATCHLIST:
 
             state[ticker] = True
 
-            print(f"✅ ALERT SENT -> {ticker}")
+            print(f"✅ ALERT SENT -> {name}")
 
         elif curr > RSI_LEVEL:
             state[ticker] = False
 
-        print(
-            f"{ticker:<20} Price={price:.2f} RSI={curr:.2f}"
-        )
+        print(f"{name:<25} Price={price:.2f} RSI={curr:.2f}")
 
     except Exception as e:
-        print(f"{ticker}: {e}")
+        print(f"{name}: {e}")
 
 # ----------------------------
 # Send Daily Report
