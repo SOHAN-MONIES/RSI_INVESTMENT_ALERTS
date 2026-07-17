@@ -14,14 +14,21 @@ WATCHLIST = [
     # INDIA
     # =========================
     "^NSEI",            # Nifty 50
-    "^NSEBANK",         # Bank Nifty
+    "^NSEBANK",         # Nifty Bank
     "^CNXIT",           # Nifty IT
     "^CNXAUTO",         # Nifty Auto
     "^CNXPHARMA",       # Nifty Pharma
     "^CNXPSUBANK",      # Nifty PSU Bank
-    "^CNXMETAL",        # Nifty Metal
     "^CNXINFRA",        # Nifty Infrastructure
+    "^CNXCONSUMPTION",  # Nifty Consumption
+    "^CNXMETAL",        # Nifty Metal
+    "^CNXFMCG",         # Nifty FMCG
+    "^CNXENERGY",       # Nifty Energy
     "^CNXREALTY",       # Nifty Realty
+    "^CNXMEDIA",        # Nifty Media
+    "^CNXFINSERVICE",   # Nifty Financial Services
+    "^CNXMIDCAP",       # Nifty Midcap 100
+    "^CNXSMLCAP",       # Nifty Smallcap 100
 
     # =========================
     # UNITED STATES
@@ -31,18 +38,21 @@ WATCHLIST = [
     "^DJI",             # Dow Jones
     "^RUT",             # Russell 2000
     "^VIX",             # Volatility Index
+    "^SOX",             # Philadelphia Semiconductor Index
 
     # =========================
     # COMMODITIES
     # =========================
     "GC=F",             # Gold
     "SI=F",             # Silver
-    "CL=F",             # Crude Oil
+    "CL=F",             # WTI Crude Oil
+    "NG=F",             # Natural Gas
 
     # =========================
-    # CURRENCY
+    # CURRENCIES
     # =========================
     "DX-Y.NYB",         # US Dollar Index (DXY)
+    "INR=X",            # USD/INR Exchange Rate
 
     # =========================
     # CRYPTO
