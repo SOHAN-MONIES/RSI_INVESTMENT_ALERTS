@@ -20,15 +20,13 @@ WATCHLIST = [
     "^CNXPHARMA",       # Nifty Pharma
     "^CNXPSUBANK",      # Nifty PSU Bank
     "^CNXINFRA",        # Nifty Infrastructure
-    "^CNXCONSUMPTION",  # Nifty Consumption
     "^CNXMETAL",        # Nifty Metal
     "^CNXFMCG",         # Nifty FMCG
     "^CNXENERGY",       # Nifty Energy
     "^CNXREALTY",       # Nifty Realty
     "^CNXMEDIA",        # Nifty Media
-    "^CNXFINSERVICE",   # Nifty Financial Services
-    "^CNXMIDCAP",       # Nifty Midcap 100
-    "^CNXSMLCAP",       # Nifty Smallcap 100
+    "JUNIORBEES.NS",   # Nifty Next 50 ETF
+    "MIDCAPETF.NS",    # Midcap ETF (if available)
 
     # =========================
     # UNITED STATES
