@@ -10,29 +10,43 @@ RSI_LEVEL = 30
 
 
 WATCHLIST = [
-    # Indices
-    "^NSEI",
-    "^NSEBANK",
-    "^CNXIT",
+    # =========================
+    # INDIA
+    # =========================
+    "^NSEI",            # Nifty 50
+    "^NSEBANK",         # Bank Nifty
+    "^CNXIT",           # Nifty IT
+    "^CNXAUTO",         # Nifty Auto
+    "^CNXPHARMA",       # Nifty Pharma
+    "^CNXPSUBANK",      # Nifty PSU Bank
+    "^CNXMETAL",        # Nifty Metal
+    "^CNXINFRA",        # Nifty Infrastructure
+    "^CNXREALTY",       # Nifty Realty
 
-    # Broad Market
-    "NIFTYBEES.NS",
-    "JUNIORBEES.NS",
+    # =========================
+    # UNITED STATES
+    # =========================
+    "^GSPC",            # S&P 500
+    "^NDX",             # Nasdaq-100
+    "^DJI",             # Dow Jones
+    "^RUT",             # Russell 2000
+    "^VIX",             # Volatility Index
 
-    # Sector ETFs
-    "BANKBEES.NS",
-    "PSUBNKBEES.NS",
-    "ITBEES.NS",
-    "PHARMABEES.NS",
-    "AUTOBEES.NS",
-    "CONSUMBEES.NS",
-    "INFRABEES.NS",
+    # =========================
+    # COMMODITIES
+    # =========================
+    "GC=F",             # Gold
+    "SI=F",             # Silver
+    "CL=F",             # Crude Oil
 
-    # Precious Metals
-    "GOLDBEES.NS",
-    "SILVERBEES.NS",
+    # =========================
+    # CURRENCY
+    # =========================
+    "DX-Y.NYB",         # US Dollar Index (DXY)
 
-    # International
-    "MON100.NS",
-    "MAFANG.NS"
+    # =========================
+    # CRYPTO
+    # =========================
+    "BTC-USD",          # Bitcoin
+    "ETH-USD",          # Ethereum
 ]
